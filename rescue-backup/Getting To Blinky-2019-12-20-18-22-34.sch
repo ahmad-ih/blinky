@@ -1,5 +1,36 @@
-EESchema Schematic File Version 4
-EELAYER 30 0
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:GTB
+LIBS:Getting To Blinky-cache
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -14,7 +45,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L GTB:7555 U1
+L 7555 U1
 U 1 1 576711A7
 P 5050 3900
 F 0 "U1" H 5450 3150 60  0000 C CNN
@@ -25,7 +56,7 @@ F 3 "" H 5150 3425 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R1
+L R R1
 U 1 1 5767125D
 P 3850 3000
 F 0 "R1" V 3930 3000 50  0000 C CNN
@@ -36,7 +67,7 @@ F 3 "" H 3850 3000 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R2
+L R R2
 U 1 1 576712C9
 P 3850 3850
 F 0 "R2" V 3930 3850 50  0000 C CNN
@@ -47,7 +78,7 @@ F 3 "" H 3850 3850 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C1
+L C C1
 U 1 1 576712EE
 P 3850 4700
 F 0 "C1" H 3875 4800 50  0000 L CNN
@@ -58,7 +89,7 @@ F 3 "" H 3850 4700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R3
+L R R3
 U 1 1 5767133E
 P 6300 4150
 F 0 "R3" V 6380 4150 50  0000 C CNN
@@ -69,7 +100,7 @@ F 3 "" H 6300 4150 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED D1
+L LED D1
 U 1 1 5767138D
 P 6300 4700
 F 0 "D1" H 6300 4800 50  0000 C CNN
@@ -80,16 +111,16 @@ F 3 "" H 6300 4700 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3850 3150 3850 3475
+	3850 3150 3850 3700
 Wire Wire Line
 	4350 3475 3850 3475
 Connection ~ 3850 3475
 Wire Wire Line
-	3850 4000 3850 4450
+	3850 4000 3850 4550
 Wire Wire Line
 	4350 3875 4125 3875
 Wire Wire Line
-	4125 3875 4125 4325
+	4125 3875 4125 4450
 Wire Wire Line
 	4125 4325 4350 4325
 Wire Wire Line
@@ -101,7 +132,7 @@ Wire Wire Line
 Wire Wire Line
 	4800 2825 5325 2825
 Wire Wire Line
-	5325 2225 5325 2825
+	5325 2225 5325 3125
 Wire Wire Line
 	3850 2850 3850 2225
 Wire Wire Line
@@ -110,7 +141,7 @@ Connection ~ 5325 2825
 Wire Wire Line
 	3850 4850 3850 5200
 Wire Wire Line
-	3850 5200 4400 5200
+	3850 5200 6300 5200
 Wire Wire Line
 	4850 5200 4850 4750
 Wire Wire Line
@@ -123,7 +154,7 @@ Wire Wire Line
 	6300 5200 6300 4900
 Connection ~ 4850 5200
 $Comp
-L power:GND #PWR01
+L GND #PWR01
 U 1 1 57671AB1
 P 4400 5525
 F 0 "#PWR01" H 4400 5275 50  0001 C CNN
@@ -138,21 +169,37 @@ Wire Wire Line
 Connection ~ 4400 5200
 Text Label 4400 2225 0    60   ~ 0
 VDD
+$Comp
+L Battery BT1
+U 1 1 57671C94
+P 2825 3575
+F 0 "BT1" H 2925 3625 50  0000 L CNN
+F 1 "Battery" H 2925 3525 50  0000 L CNN
+F 2 "GTB:S8211R" V 2825 3615 60  0001 C CNN
+F 3 "" V 2825 3615 60  0000 C CNN
+	1    2825 3575
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 57671DF0
+P 2825 4100
+F 0 "#PWR02" H 2825 3850 50  0001 C CNN
+F 1 "GND" H 2825 3950 50  0000 C CNN
+F 2 "" H 2825 4100 60  0000 C CNN
+F 3 "" H 2825 4100 60  0000 C CNN
+	1    2825 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2825 4100 2825 3725
+Wire Wire Line
+	2825 3425 2825 2975
+Wire Wire Line
+	2825 2975 3000 2975
+Text Label 2925 2975 0    60   ~ 0
+VDD
 Wire Wire Line
 	5250 4775 5250 5200
 Connection ~ 5250 5200
-Wire Wire Line
-	3850 3475 3850 3700
-Wire Wire Line
-	3850 4450 3850 4550
-Wire Wire Line
-	4125 4325 4125 4450
-Wire Wire Line
-	5325 2825 5325 3125
-Wire Wire Line
-	4850 5200 5250 5200
-Wire Wire Line
-	4400 5200 4850 5200
-Wire Wire Line
-	5250 5200 6300 5200
 $EndSCHEMATC
