@@ -117,10 +117,6 @@ Wire Wire Line
 	5725 3975 6300 3975
 Wire Wire Line
 	6300 3975 6300 4000
-Wire Wire Line
-	6300 4300 6300 4500
-Wire Wire Line
-	6300 5200 6300 4900
 Connection ~ 4850 5200
 $Comp
 L power:GND #PWR01
@@ -155,4 +151,8 @@ Wire Wire Line
 	4400 5200 4850 5200
 Wire Wire Line
 	5250 5200 6300 5200
+Wire Wire Line
+	6300 4300 6300 4550
+Wire Wire Line
+	6300 4850 6300 5200
 $EndSCHEMATC
